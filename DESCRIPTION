@@ -1,0 +1,24 @@
+Package: fancyplots
+Title: Fancyplots: for log-x-scaled graphs and nothing more 
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Kaitlin",
+           family = "Sullivan",
+           role = c("aut", "cre"),
+           email = "kaitlinsullivan94@gmail.com")
+Description: This package contains the function: scatter_plot_logx. This function plots a graph with a logarithmically scaled x axis.
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    ggplot2,
+    gapminder,
+    magrittr,
+    dplyr
+VignetteBuilder: knitr
+License: MIT + file LICENSE

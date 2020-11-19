@@ -1,0 +1,7 @@
+pandoc: 2.3.1
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  scatter_plot_logx: scatter_plot_logx.html
+last_built: 2020-11-19T05:29Z
+

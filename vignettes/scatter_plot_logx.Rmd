@@ -1,0 +1,77 @@
+---
+title: "scatter_plot_logx"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{scatter_plot_logx}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(fancyplots)
+library(dplyr)
+library(gapminder)
+```
+
+`scatter_plot_logx`
+
+HELLO! This vignette is essentially my README.md for the package. ENJOY!
+
+## Examples with `scatter_plot_logx` 
+#### making scatterplots with a logarithmically scaled x axis!!!
+(the only function in this package :sweat_smile:)
+
+##### Example 1: Numerical Y Axis
+Here is how `fancyplots` *scatter_plot_x* function works with the gapminder dataset. In this example, our y axis will be *lifeExp*, which contains the average life expectancy of each country over the years.
+
+This graph shows *population vs life expectancy* in the countries of Asia from 1952-2007.
+
+```{r example1}
+library(fancyplots)
+library(gapminder)
+example1 <- filter(gapminder, continent == "Asia")
+scatter_plot_logx(example1, "pop", "lifeExp")
+```
+
+##### Example 2: Factors as the Y Axis
+Here is how `fancyplots` *scatter_plot_x* function works with the gapminder dataset. In this example, our y axis will be *continent*. 
+
+This graph shows us the spread of the population in the countries of each continent in 2007.
+
+```{r example2}
+library(fancyplots)
+example2 <- filter(gapminder, year == 2007)
+scatter_plot_logx(example2, "pop", "continent")
+```
+
+## Default Features
+
+##### `na.omit`
+The `scale_log_x` by default removes any NA's within your dataset via **na.omit** = TRUE!
+
+Below is plotting of example 1 with multiple NAs inserted.
+```{r example3}
+#adding NAs to rows 150-250
+example1[150:250, ] <- NA
+
+scatter_plot_logx(example1, "pop", "lifeExp", na.omit = TRUE)
+```
+
+##### `logx`
+The `scale_log_x` by default scales the x axis of your plot via **logx** = TRUE! 
+
+Below is example 2, plotting with **logx** = FALSE
+
+```{r example4}
+scatter_plot_logx(example2, "pop", "continent", logx = FALSE)
+```
+
+##### `verbose`
+Finally, the `scale_log_x` by default has a **verbose** option set to TRUE! This prints those update messages one sees prior to the plot. You can similarly turn off these messages by making **verbose** equal to FALSE. 
