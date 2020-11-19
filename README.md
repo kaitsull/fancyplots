@@ -7,7 +7,7 @@ fancyplots
 
 <!-- badges: start -->
 
-<https://img.shields.io/github/issues/kaitsull/fancyplots>
+\[\]<https://img.shields.io/github/issues/kaitsull/fancyplots>
 
 <!-- badges: end -->
 
@@ -42,8 +42,9 @@ devtools::install_github("kaitsull/fancyplots")
 6.  Finally, I linked up this package to my github repo using
     `use_github()`
 
-**BONUS:** \[X\] badges \[X\] (website)\[\] \[X\] Changelog for release
-\[X\] Code of conduct
+**BONUS:** - \[X\] badges - \[X\]
+[Website](https://kaitsull.github.io/fancyplots/) - \[X\] Changelog for
+release - \[X\] Code of conduct
 
 ## Examples with `scatter_plot_logx`
 
